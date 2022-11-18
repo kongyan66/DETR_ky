@@ -1,5 +1,5 @@
 dataset_type = 'HRSCDataset'
-data_root = '/workspace/CV/users/wangdi153/Dataset/HRSC2016/'
+data_root = '/home/z/code/kch/RS_Dataset/hrsc2016/'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 train_pipeline = [
@@ -66,7 +66,7 @@ test_pipeline = [
 # disable evluation, only need train and test
 # uncomments it when use trainval as train
 data = dict(
-    samples_per_gpu=2,
+    samples_per_gpu=1,
     workers_per_gpu=4,
     train=dict(
         type=dataset_type,
